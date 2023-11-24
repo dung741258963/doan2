@@ -1,0 +1,503 @@
+#wanner{
+    min-height: 850px;
+    width: 100%;
+    background-color: white;
+    margin: auto;
+    
+}
+#searth{
+    width: 100%;
+    height: 100px;
+}
+.container-2{
+    width: 300px;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+}
+.container-2 input#search{
+    width: 50px;
+    height: 50px;
+    background: #FFBC09;
+    border: none;
+    font-size: 10pt;
+    float: right;
+    margin-right: -1200px;
+    margin-top: -40px;
+    color: #262626;
+    padding-left: 36px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: black;
+    -webkit-transition: width .55s ease;
+    -moz-transition: width .55s ease;
+    -ms-transition: width .55s ease;
+    -o-transition: width .55s ease;
+    transition: width .55s ease;
+}
+.container-2 .icon{
+    position: absolute;
+    top: 50%;
+    margin-left: 1462px;
+    margin-top: -25px;
+    z-index: 1;
+    color: #4f5b66;
+    font-size: 25px;
+    
+}
+.container-2 input#search:focus, .container-2 input#search:active{
+    outline:none;
+    width: 300px;
+}
+.container-2:hover input#search{
+  width: 300px;
+}
+.container-2:hover .icon{
+    color: #93a2ad;
+}
+#chitiet{
+    
+    height: 600px;
+    width: 700px;
+    float: left;
+    margin-top: 20px;
+}
+#chitiet1{
+
+    width: 660px;
+    height: 550px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.gia{
+    width: 630px;
+    height: 70px;
+    margin-left:5px;
+    margin-top: 20px;
+    
+}
+.gia a{
+    color: grey;
+    text-decoration: line-through;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.gia b{
+    color:red;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 30px;
+}
+#giamgia{
+    width: 100px;
+    height: 30px;
+    float:right;
+    margin-top: 5px;
+    border-radius: 15px;
+}
+.mota{
+   
+    width: 600px;
+    height: 30px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+#vanchuyen{
+    
+    width: 600px;
+    height: 130px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.phanloai{
+   
+    width: 600px;
+    height: 50px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+#sp{
+    height: 600px;
+    width: 570px;
+    float: left;
+    margin-left: 160px;
+    margin-top: 20px;
+    
+}
+#sp img{
+    border-radius: 15px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+#picture{
+    height: 400px;
+    width: 400px;
+    margin: auto;
+    margin-top: 20px;
+    margin-left: 110px;
+}
+.picture{
+    height: 100px;
+    width: 100px;
+    float: left;
+    margin-left: 40px;
+    margin-top: 50px;
+    border-radius: 25px;
+}
+.picture img{
+    width:100px;
+    height: 120px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+#picture img{
+    width: 400px;
+    height: 400px;
+    border-radius: 15px;
+}
+.button{
+    margin-left: 10px;
+}
+#amount{
+    margin-top: 20px;
+    margin-left: 10px;
+    display: flex;
+}
+.button button{
+    height:40px;
+    width: 100px;
+    border: 1px solid #189EFF;
+    border-radius: 5px;
+    color: #189EFF;
+    margin-right: 10px;
+    cursor: pointer;
+}
+#amount button{
+    height:30px;
+    width: 50px;
+    cursor: pointer;
+}
+#amount #amountt{
+    width:50px;
+    text-align: center;
+    height:30px;
+    width: 50px;
+    cursor: pointer;
+}
+#chonmua{
+    background-color:red;
+    color:white;
+    border-radius: 10px;
+    margin-left: 300px;
+    margin-top: -50px;
+    height: 50px;
+    width: 150px;
+}
+.chonmua a{
+    text-decoration: none;
+    color: white;
+    
+}
+#giohang{
+    height: 50px;
+    width: 250px;
+    background-color:#e99ba5;
+    color:white;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+#giohang a{
+    text-decoration: none;
+    color: white;
+}
+#mtsp{
+    border: 1px solid white;
+    margin-left: 40px;
+}
+#mtsp img {
+    display: flex;
+}
+#chonmua a{
+    text-decoration: none;
+    color: white;
+}
+#menu{
+    width: 100%;
+    height: 100px;
+    box-shadow: 5px 5px 20px black;
+    position: sticky;
+    top: 0px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+    background: #5ccde9;
+    
+}
+ul li{
+    display: inline-block;
+    position: relative;
+    padding: 20px 20px 20px 8px;
+    
+}
+ul li a{
+    display: block;
+    padding: 25px 25px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 25px;
+    margin-left: 40px;
+}
+ul li ul.dropdown li{
+    display: block;
+    
+}
+ul li ul.dropdown{
+    position: absolute;
+    width: 100%;
+    background: white;
+    z-index: 999;
+    display: none;
+    border-radius: 25px;
+}
+ul li a:hover{
+    background: #FFBC09;
+}
+ul li:hover ul.dropdown{
+    display: block;
+}
+#menu a{
+    text-decoration: none;
+    color: black;
+}
+#danhgia{
+    width: 77.2%;
+    height: 100px;
+    margin-left: 160px;
+    margin-top: -60px;
+
+}
+#danhgia img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+.danhgia{
+    width: 210px;
+    height: 100px;
+    float: right;
+    margin-right: 65px;
+    
+}
+.store{
+    width: 92px;
+    height: 30px;
+    float: left;
+    margin-left: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 15px;
+    border: none;
+    
+}
+.store a{
+    text-decoration: none;
+    color: black;
+}
+#btnmota{
+    width: 350px;
+    height: 30px;
+    margin-left: 160px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+#motanh{
+    
+    width: 70%;
+    height: 5080px;
+    margin-left: 220px;
+    margin-top: 20px;
+}
+#anh1 img{
+    width: 100%;
+    height: 670px;
+}
+#anh2 img{
+    width: 100%;
+    height: 1200px;
+}
+#anh3 img{
+    width: 100%;
+    height: 1200px;
+}
+#anh4 img{
+    width: 100%;
+    height: 2000px;
+}
+#thongtinlienhe{
+    width: 100%;
+    height: 600px;
+    margin-left: 100px;
+}
+.ttlh{
+    width: 300px;
+    height: 580px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.pptt{
+    width: 70px;
+    height: 40px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.pptt img{
+    width: 70px;
+    height: 40px;
+}
+.thanhvien{
+    width: 200px;
+    height: 50px;
+}
+.thanhvien img{
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+#showcart{
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+}
+#showcart h2{
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+#showcart table{
+    width: 100%;
+}
+#showcart table thead tr th:first-child{
+    text-align: left;
+}
+#showcart table tbody tr td:last-child{
+    text-align: right;
+}
+#showcart table thead tr th:last-child{
+    text-align: right;
+}
+#showcart table tr td{
+    border-bottom: 1px solid #ddd;
+    padding: 12px 0;
+}
+#thongtinlienhe{
+    width: 100%;
+    height: 600px;
+    box-shadow: 5px 5px 20px black;
+    border-radius: 5px;
+    margin-left: -1px;
+}
+.ttlh{
+    width: 300px;
+    height: 580px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 150px;
+}
+.pptt{
+    width: 70px;
+    height: 40px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.pptt img{
+    width: 70px;
+    height: 40px;
+}
+.pptt1 img{
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+}
+.pptt1 img:hover {
+    transform: scale(1.1);
+}
+#motasp p{
+    font-size: 20px;
+    margin-top: 50px;
+}
+.content:hover .add{
+    display: block;
+}
+.content1:hover .add{
+    display: block;
+}
+#content{
+    width: 92%;
+    height: 42%;
+    margin-left: 70px;
+    margin-top: 10px;
+}
+.content{
+    width: 200px;
+    height: 430px;
+    float: left;
+    margin-top: 10px;
+    margin-left:10px;
+    background: white;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px black;
+}
+.content img{
+    width: 200px;
+    height: 250px;
+    cursor: pointer;
+}
+.content img:hover {
+    transform: scale(1.1);
+}
+.content:hover {
+    transform: scale(1.1);
+}
+#heart {
+    cursor: pointer;
+    transition: transform 0.2s;
+    float: right;
+    margin-right: 10px;
+    font-size: 30px;
+    margin-top: -30px;
+}
+#heart.is-active {
+    transform: scale(1.2);
+    color: red; /* Đổi màu khi yêu thích */
+}
+.heart {
+    cursor: pointer;
+    transition: transform 0.2s;
+    float: right;
+    margin-right: 10px;
+    font-size: 30px;
+    margin-top: -30px;
+}

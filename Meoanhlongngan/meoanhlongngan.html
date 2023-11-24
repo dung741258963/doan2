@@ -1,0 +1,308 @@
+<html>
+    <head>
+        <title>Mèo Anh lông ngắn</title>
+        <link rel="stylesheet" href="meoanhlongngan.css">
+        <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.min.css">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/6.4.0/css/font-awesome.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="wanner">
+            <div id="menu">
+                <ul>
+                    <li><a href="http://127.0.0.1:5500/shop.html"><i class="fa-solid fa-house"></i>Trang chủ</a></li>
+                    <li><a href="#">Chó Cảnh<i class="fa-solid fa-caret-down"></i></a>
+                        <ul class="dropdown">
+                            <!-- <li><a href="#">POODLE</a></li>
+                            <li><a href="#">AKITA INU</a></li>
+                            <li><a href="#">GOLDEN RETRIEVER</a></li>
+                            <li><a href="#">BULL PHÁP</a></li>
+                            <li><a href="#">CORGI</a></li>
+                            <li><a href="#">HUSKY</a></li>
+                            <li><a href="#">PITBULL</a></li>
+                            <li><a href="#">SHIBA INU</a></li>
+                            <li><a href="#">BULLDOG ANH</a></li>
+                            <li><a href="#">ALASKA</a></li> -->
+                        </ul>
+                    </li>
+                    <li><a href="#">Mèo Cảnh<i class="fa-solid fa-caret-down"></i></a>
+                        <ul class="dropdown">
+                            <!-- <li><a href="#">ANH LÔNG NGẮN</a></li>
+                            <li><a href="#">SCOTTISH TAI CỤP</a></li>
+                            <li><a href="#">SPHYNX KHÔNG LÔNG</a></li>
+                            <li><a href="#">ANH LÔNG DÀI</a></li>
+                            <li><a href="#">BA TƯ</a></li>
+                            <li><a href="#">RAGDOLL</a></li>
+                            <li><a href="#">TOYGER</a></li>
+                            <li><a href="#">MUNCHKIN CHÂN NGẮN</a></li>
+                            <li><a href="#">BENGAL</a></li>
+                            <li><a href="#">MAINE COON</a></li> -->
+                        </ul>
+                    </li>
+                    <li><a href="#">Đồ cho chó <i class="fa-solid fa-caret-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="#">THỨC ĂN CHO CHÓ</a></li>
+                            <li><a href="#">SỮA TẮM CHO CHÓ</a></li>
+                            <li><a href="#">ĐỒ CHƠI CHO CHÓ</a></li>
+                            <li><a href="#">CHUỒNG CHO CHÓ</a></li>
+                            <li><a href="#">ĐỒ VỆ SINH CHO CHÓ</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Đồ cho mèo<i class="fa-solid fa-caret-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="#">THỨC ĂN CHO MÈO</a></li>
+                            <li><a href="#">SỮA TẮM CHO MÈO</a></li>
+                            <li><a href="#">ĐỒ CHƠI CHO MÈO</a></li>
+                            <li><a href="#">CHUỒNG CHO MÈO</a></li>
+                            <li><a href="#">ĐỒ VỆ SINH CHO MÈO</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Tin tức</a></li>
+                    <li><a href="#">Dịch vụ tiện ích<i class="fa-solid fa-caret-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="#">Chăm sóc khách hàng</a></li>
+                            <li><a href="#qc2">PHỤ KIỆN</a></li>
+                            <li><a href="#dichvu">DỊCH VỤ THÚ CƯNG</a></li>
+                        </ul>
+                    </li>
+                    <a id="cart" onclick="showcart()" style="font-size: 15px;cursor: pointer;margin-left: 10px;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;margin-top: 30px;margin-left: 30px;cursor: pointer;position: relative;"></i><h3 class="cartNo" style="position: absolute;"></h3></a>
+                    <div class="box">
+                        <div class="container-2">  
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <hr style="width: 90%;margin:auto;">
+            <div id="sp">
+                <img id="picture" src="dt4.jpg">
+                <div class="picture"><img onclick="nextimg('dt2')" src="dt2.jpg"></div>
+                <div class="picture"><img onclick="nextimg('dt3')" src="dt3.jpg"></div>
+                <div class="picture"><img onclick="nextimg('dt4')" src="dt4.jpg"></div>
+                <div class="picture"><img onclick="nextimg('dt1')" src="dt1.jpg"></div>
+            </div>
+            <div id="chitiet">
+                <div id="chitiet1">
+                    <h1>Mèo Anh lông ngắn</h1>
+                    <div class="gia"><a >3.000.000đ</a>
+                        <b>2.500.000đ</b>
+                        <div id="giamgia"><span style="font-size: 15px;"></span></div>
+                    </div>
+                    <div class="mota" style="font-size: 15px;">
+                        <a style="color: grey;">Chi Tiết Sản Phẩm</a> 
+                        <a style="margin-left: 50px;">Thông tin sản phẩm</a> 
+                        <a href="#" style="margin-left: 5px;text-decoration: none;color: #1194f4;">Xem Thêm ></a>
+                    </div>
+                    <div class="mota" style="font-size: 15px;">
+                        <a style="color: grey;">Bảo hiểm</a>
+                        <a style="margin-left: 65px;">Cam kết có giấy tờ cấp phép của bộ y tế</a>
+                        <a href="#" style="text-decoration: none;margin-left: 10px;color: #1194f4;">Tìm hiểu thêm</a>
+                    </div>
+                    <div id="vanchuyen" style="font-size: 15px;">
+                        <a style="color: grey;">Vận Chuyển</a>
+                        <a style="margin-left: 45px;"><i class="fa-solid fa-cart-shopping"></i>Xử lý đơn hàng bởi Shoppe </a><br><br>
+                        <a style="margin-left: 140px;"><i class="fa-solid fa-truck-arrow-right"></i>Miễn phí vận chuyển</a><br><br>
+                        <a style="margin-left: 140px;"><i class="fa-solid fa-location-dot"></i>Vận chuyển tới</a> <a style="margin-left: 20px;">Phường Tràng Tiền, Quận Hoàn Kiếm</a><br><br>
+                        <a style="margin-left: 140px;">Phí vận chuyển </a> <a style="margin-left:20px;">0đ</a>
+                    </div>
+                    <div class="phanloai">
+                    <a style="color:grey;font-size: 15px;">Phân Loại:</a>
+                        <div class="button" style="float: right;">
+                            <button id="doimau" onclick="mau()">Xám Trắng</button>
+                            <button id="doimau1" onclick="mau1()">Xám</button>
+                            <button id="doimau2" onclick="mau2()">Vàng</button>
+                            <button id="doimau3" onclick="mau3()">Xám Vàng</button>
+                        </div>
+                    </div>
+                    <div class="phanloai" style="font-size: 15px;">
+                        <a style="color:grey">Số Lượng:</a>
+                        <div id="amount" style="margin-left: 130px;margin-top:-10px;">
+                            <button onclick="minus('amountt')">-</button>
+                            <input type="text" id="amountt" value="1"></input>
+                            <button onclick="plus('amountt')">+</button>
+                        </div>
+                    </div>
+                    <button id="giohang"><a href="#"><i class="fa-solid fa-cart-plus"></i>Thêm vào giỏ hàng</a></button>
+                    <button id="chonmua"><a href="#">Chọn Mua</a></button>
+                </div>
+            </div>
+        </div>
+        <div id="danhgia"><img src="logo.jpg">
+            <div class="danhgia" style="font-size: 15px;"><br>
+                <a style="color: grey;">Tham gia</a> <a style="margin-left: 20px;color:red">5 năm trước</a><br><br>
+                <a style="color: grey;">Người Theo Dõi</a> <a style="margin-left: 10px;color:red">509,4k</a>
+            </div>
+            <div class="danhgia" style="font-size: 15px;"><br>
+                <a style="color: grey;">Tỷ lệ Phản Hồi:</a> <a style="margin-left: 40px;color:red">97%</a><br><br>
+                <a style="color: grey;">Thời Gian<br> Phản Hồi:</a> <a style="margin-left: 5px;color:red">Trong vài giờ</a>
+            </div>
+            <div class="danhgia" style="font-size: 15px;"><br>
+                <a style="color: grey;">Đánh giá</a> <a style="margin-left: 50px;">4,7k</a><br><br><br>
+                <a style="color: grey;">Sản Phẩm</a> <a style="margin-left: 50px;">307</a>
+            </div>
+            <div class="danhgia">
+                <b style="font-size: 15px;">ChoMeo_Store</b><br>
+                <a style="color: grey;">Online 4h trước</a><br><br>
+                <button style="width: 100px;height: 30px;background-color: #1194f4;border-radius: 10px;border: white;cursor: pointer;"><i class="fa-brands fa-rocketchat"></i>Chat Ngay</button>
+                <button style="width: 100px;height: 30px;background-color: #1194f4;border-radius: 10px;border: white;cursor: pointer;"><i class="fa-solid fa-bag-shopping"></i>Xem Shopp</button>
+            </div>
+        </div>
+        <div id="btnmota"><input type="button" style="margin-left: 0px;background: #1194f4;border-radius: 25px;width: 300px;height: 50px;font-size: 15px;" value="Mô Tả Sản Phẩm">
+        </div><br>
+        <div id="cuoi" style="width: 80%;height: 500px;margin-left: 200px;margin-top: 10px;">
+            <div id="motasp" style="float: left;width: 50%;height: 100%;"> 
+                <p>✔️&nbsp;Giống: mèo Anh lông ngắn (British Shorthair, Aln).</p>
+                <p>✔️ Màu sắc: xám xanh</p>
+                <p>✔️ Giới tính: cái.</p>
+                <p>✔️ Tuổi: 2 tháng.</p>
+                <p>✔️&nbsp;Nguồn gốc:&nbsp;nhân giống tại Dogily Cattery Đà Lạt.</p></div>
+            <div id="ykien" style="float: left;width: 50%;height: 100%;box-shadow: 5px 5px 15px;border-radius: 5px;">
+                <h2 style="margin-left: 20px;">Hãy đánh giá ý kiến của bạn </h2>
+                <div class="thongtincanhan" style="width: 100%;height: 60px;margin-left: 20px;">
+                    <a style="float: left;">Đánh giá của bạn<span style="color: red;">*</span>:</a><br>
+                    <input type="text" placeholder="Đánh giá của bạn" style="outline: none;padding: 5px;width: 70%;float: left;margin-top: 5px;">
+                </div>
+                <div class="thongtincanhan" style="width: 100%;height: 60px;margin-left: 20px;">
+                    <a style="float: left;">ý kiến của bạn<span style="color: red;">*</span>:</a><br>
+                    <input type="text" placeholder="ý kiến của bạn" style="outline: none;padding: 5px;width: 70%;height: 100px;float: left;margin-top: 5px;">
+                </div>
+                <div class="thongtincanhan" style="width: 100%;height: 60px;margin-top: 70px;margin-left: 20px;">
+                    <a style="float: left;">Tên<span style="color: red;">*</span>:</a><br>
+                    <input type="text" placeholder="Họ và tên" style="outline: none;padding: 5px;width: 70%;float: left;margin-top: 5px;">
+                </div>
+                <div class="thongtincanhan" style="width: 100%;height: 60px;margin-left: 20px;">
+                    <a style="float: left;">Email<span style="color: red;">*</span>:</a><br>
+                    <input type="text" placeholder="Email của bạn (nếu có)" style="outline: none;padding: 5px;width: 70%;float: left;margin-top: 5px;">
+                </div>
+                <button style="width: 120px;height: 50px;border-radius: 5px;border: white;background-color: #1194f4;margin-left: 20px;">Gửi đi</button>
+            </div>
+        </div>
+        <div>
+            <button style="width: 100%;height: 40px;margin-top: 100px;background-color: #ffbc09;">Sản phẩm bạn đã xem</button>
+            <div id="content">
+                <div class="content"><img src="meoANHLONGNGAN.jpg">
+                    <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                        <div style="margin-top: 10px;">
+                            <b style="font-size: 15px;font-weight: bold;cursor: pointer;">MÈO ANH LÔNG NGẮN</b><br><br>
+                            <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><p style="float: left;color:red">đ</p><br>
+                            <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                            <div class="heart">&#10084;</div>
+                        </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;">Thêm vào giỏ hàng</button>
+                </div>
+                <div class="content"><img src="MAOANHLONGDAI.jpg">
+                    <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">MÈO ANH LÔNG DÀI</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><p style="float: left;color:red">đ</p><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;">Thêm vào giỏ hàng</button>
+                </div>
+                <div class="content"><img src="MUNCHKIN.jpg">
+                    <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                        <div style="margin-top: 10px;">
+                            <b style="font-size: 15px;font-weight: bold;cursor: pointer;">MÈO MUNCHIN</b><br><br>
+                            <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><p style="float: left;color:red">đ</p><br>
+                            <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                            <div class="heart">&#10084;</div>
+                        </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;">Thêm vào giỏ hàng</button>
+                </div>
+                <div class="content"><img src="TAI CUP.png">
+                    <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                        <div style="margin-top: 10px;">
+                            <b style="font-size: 15px;font-weight: bold;cursor: pointer;">MÈO SCOTTISH TAI CỤP</b><br><br>
+                            <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><p style="float: left;color:red">đ</p><br>
+                            <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                            <div class="heart">&#10084;</div>
+                        </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;">Thêm vào giỏ hàng</button>
+                </div>
+                <div class="content"><img src="BENGAL.png">
+                    <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                        <div style="margin-top: 10px;">
+                            <b style="font-size: 15px;font-weight: bold;cursor: pointer;">MÈO BENGAL</b><br><br>
+                            <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><p style="float: left;color:red">đ</p><br>
+                            <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                            <div class="heart">&#10084;</div>
+                        </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;">Thêm vào giỏ hàng</button>
+                </div>
+                <div class="content"><img src="TOYGER.jpg">
+                    <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                        <div style="margin-top: 10px;">
+                            <b style="font-size: 15px;font-weight: bold;cursor: pointer;">MÈO TOYGER</b><br><br>
+                            <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><p style="float: left;color:red">đ</p><br>
+                            <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                            <div class="heart">&#10084;</div>
+                        </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;">Thêm vào giỏ hàng</button>
+                </div>
+                <div class="content"><img src="MAINECOON.jpg">
+                    <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                        <div style="margin-top: 10px;">
+                            <b style="font-size: 15px;font-weight: bold;cursor: pointer;">MÈO MAINE COON</b><br><br>
+                            <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><p style="float: left;color:red">đ</p><br>
+                            <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                            <div class="heart">&#10084;</div>
+                        </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;">Thêm vào giỏ hàng</button>
+                </div>
+                <div class="content"><img src="KHONGLONG.jpg">
+                    <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                        <div style="margin-top: 10px;">
+                            <b style="font-size: 15px;font-weight: bold;cursor: pointer;">MÈO KHÔNG LÔNG</b><br><br>
+                            <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><p style="float: left;color:red">đ</p><br>
+                            <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                            <div class="heart">&#10084;</div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;">Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+        </div>
+        <div id="thongtinlienhe" style="margin-top: 50px;">
+            <div class="ttlh">
+            <h2>Tổng đài hỗ trợ miễn phí</h2><br>
+                <a>Gọi mua hàng <b>1800.2097</b>(7h30 - 22h00)</a><br>
+                <a>Gọi khiếu nại <b>1800.2097</b>(7h30 - 22h00)</a><br>
+                <a>Gọi bảo hành <b>1800.2097</b>(7h30 - 22h00)</a><br><br>
+                <h2>Phương thức thanh toán</h2>
+                <div class="pptt"><img src="#"></div>
+                <div class="pptt"><img src="#"></div>
+                <div class="pptt"><img src="#"></div>
+                <div class="pptt"><img src="#"></div>
+                <div class="pptt"><img src="#"></div>
+                <div class="pptt"><img src="#"></div>
+                <div class="pptt"><img src="#"></div>
+            </div>
+            <div class="ttlh">
+                <h2> Thông Tin Và Chính Sách </h2><br><br>
+                <a> Mua hàng và thanh toán Online </a><br><br>
+                <a> Mua hàng trả góp Online </a><br><br>
+                <a> Tra thông tin đơn hàng </a><br><br>
+                <a> Tra điểm Smember </a><br><br>
+                <a> Tra thông tin bảo hành </a><br><br>
+                <a> Tra cứu hóa đơn điện tử </a><br><br>
+                <a> Thông tin hóa đơn mua hàng </a><br><br>
+                <a> Trung tâm bảo hành chính hãng </a><br><br>
+                <a> Quy định về việc sao lưu dữ liệu </a><br><br>
+            </div>
+            <div class="ttlh">
+                <h2>Dịch Vụ Và Thông Tin Khách </h2><br><br>
+                <a> Khách hàng doanh nghiệp </a><br><br>
+                <a> Ưu đãi thanh toán</a><br><br>
+                <a> Quy chế hoạt động</a><br><br>
+                <a> Chính sách Bảo hành</a><br><br>
+                <a>Liên hệ hợp tác kinh doanh</a><br><br>
+                <a>Tuyển dụng</a><br><br>
+                <a>Dịch vụ bảo hành điện thoại</a><br><br>
+                <a> Dịch vụ bảo hành mở hành</a><br><br>
+            </div>
+            <div class="ttlh">
+                <h2>Kết nối với Shopp</h2>
+                <div class="pptt1"><img src="logo.jpg"></div>
+                
+            </div>
+        </div>
+    </body>
+    <script src="meoanhlongngan.js"></script>
+</html>

@@ -1,0 +1,785 @@
+<html>
+    <head>
+        <title>Shopp ban thu cung</title>
+        <link rel="stylesheet" href="shop.css">
+        <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.min.css">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/6.4.0/css/font-awesome.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="logo">
+            <div id="logo1"><img src="logo.jpg" href="http://127.0.0.1:5500/index.html#"></div>
+            <div id="logo2">
+                <div class="logo2"><input type="button" value="ADMIN" onclick="window.location.href='http://127.0.0.1:5500/admin/admin.html'">
+                </div>
+                <div class="logo2"><input type="button" value="Giới thiệu " onclick="window.location.href='#'"></div>
+                <div class="logo2"><input type="button" value="Đăng Nhập" onclick="window.location.href='http://127.0.0.1:5500/LOGIN/login.html'"></div>
+                <div class="search">
+                    <span class="icon"><i class="fa fa-search"></i></span>
+                    <input type="search" id="search" placeholder="Tìm kiếm thông tin tại đây..." />
+                </div>
+            </div>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="#"><i class="fa-solid fa-house"></i>Trang chủ</a></li>
+                <li><a href="http://127.0.0.1:5500/chocanh/chocanh.html">Chó Cảnh<i class="fa-solid fa-caret-down"></i></a>
+                    <ul class="dropdown">
+                        <!-- <li><a href="#">AKITA INU</a></li>
+                        <li><a href="#">GOLDEN RETRIEVER</a></li>
+                        <li><a href="#">BULL PHÁP</a></li>
+                        <li><a href="#">CORGI</a></li>
+                        <li><a href="#">HUSKY</a></li>
+                        <li><a href="#">PITBULL</a></li>
+                        <li><a href="#">SHIBA INU</a></li>
+                        <li><a href="#">BULLDOG ANH</a></li>
+                        <li><a href="#">ALASKA</a></li> -->
+                    </ul>
+                </li>
+                <li><a href="http://127.0.0.1:5500/Meoanhlongngan/meoanhlongngan.html">Mèo Cảnh<i class="fa-solid fa-caret-down"></i></a>
+                    <ul class="dropdown">
+                        <!-- <li><a href="http://127.0.0.1:5500/Meoanhlongngan/meoanhlongngan.html">ANH LÔNG NGẮN</a></li> -->
+                        <!-- <li><a href="#">SPHYNX KHÔNG LÔNG</a></li>
+                        <li><a href="#">ANH LÔNG DÀI</a></li>
+                        <li><a href="#">BA TƯ</a></li>
+                        <li><a href="#">RAGDOLL</a></li>
+                        <li><a href="#">TOYGER</a></li>
+                        <li><a href="#">MUNCHKIN CHÂN NGẮN</a></li>
+                        <li><a href="#">BENGAL</a></li>
+                        <li><a href="#">MAINE COON</a></li> -->
+                    </ul>
+                </li>
+                <li><a href="#">Đồ cho chó <i class="fa-solid fa-caret-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="#">THỨC ĂN CHO CHÓ</a></li>
+                        <li><a href="#">SỮA TẮM CHO CHÓ</a></li>
+                        <li><a href="#">ĐỒ CHƠI CHO CHÓ</a></li>
+                        <li><a href="#">CHUỒNG CHO CHÓ</a></li>
+                        <li><a href="#">ĐỒ VỆ SINH CHO CHÓ</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Đồ cho mèo<i class="fa-solid fa-caret-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="#">THỨC ĂN CHO MÈO</a></li>
+                        <li><a href="#">SỮA TẮM CHO MÈO</a></li>
+                        <li><a href="#">ĐỒ CHƠI CHO MÈO</a></li>
+                        <li><a href="#">CHUỒNG CHO MÈO</a></li>
+                        <li><a href="#">ĐỒ VỆ SINH CHO MÈO</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Tin tức</a></li>
+                <li><a href="#">Dịch vụ tiện ích<i class="fa-solid fa-caret-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="#">Chăm sóc khách hàng</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#dichvu">DỊCH VỤ THÚ CƯNG</a></li>
+                    </ul>
+                </li>
+                <a id="cart" onclick="showcart()" style="font-size: 15px;cursor: pointer;margin-left: 10px;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;margin-top: 30px;margin-left: 30px;cursor: pointer;position: relative;"></i><h3 class="cart-count" style="position: absolute;">0</h3></a>
+                <div class="box">
+                    <div class="container-2">  
+                    </div>
+                </div>
+                <div id="showcart">
+                    <a id="cart" onclick="showcart()"><i class="fa-solid fa-circle-xmark" style="cursor: pointer;float: left;font-size: 25px;"></i><b style="cursor: pointer;float: left;font-size: 20px;margin-left: 10px;">Thoát</b></a><br><br>
+                    <h2>Giỏ Hàng</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Sản Phẩm</th>
+                                <th>Giá</th>
+                                <th>SL</th>
+                                <th>Chọn</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+                            
+                        </tbody>
+                    </table>
+                    <div style="text-align: right;" class="price-total">
+                        <p style="font-weight: bold;font-size: 20px;">Tổng Tiền:<span id="tien">0</span><sup>đ</sup></p>
+                    </div>
+                    <input id="xoatatca" type="button" value="Xóa tất cả" onclick="xoatatca()" style="border-radius: 5px;width: 200px;height: 50px;margin-top: 50px;font-size: 15px;border: none;cursor: pointer;">
+                    <input type="button" value="Xem chi tiết đơn hàng" onclick="window.location.href='http://127.0.0.1:5500/SHOPCART/shopcart.html'" style="border-radius: 5px;width: 200px;height: 50px;margin-top: 50px;font-size: 15px;border: none;cursor: pointer;">
+                </div>
+            </ul>
+        </div>
+        <div id="wanner">
+            <div id="video">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/d05AbKn5YK8?si=uV0fCaSawvtepwG1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div id="qc2">
+                <img id="slide" src="1.jpg">
+            </div>
+        </div>
+            <!--  -->
+        <div style="margin-left: 70px;width: 92%;"><button style="width: 30%;height: 40px;margin-top: 10px;border-radius: 5px;background-color: #ffbc09;border: none;cursor: pointer;"><b>PHỤ KIỆN CHÓ MÈO, THÚ CƯNG</b></button>
+            
+        <br><br><hr size="5px" color="#ffbc09">
+        </div>
+        <div id="content">
+                <div class="content">
+                        <img src="dochocho.jpg" >
+                        <button style="margin-top: -250px;margin-left: 0px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                        <div style="margin-top: 10px;">
+                            <b style="font-size: 15px;cursor: pointer;">ĐỒ CHO CHÓ</b><br><br>
+                            <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        </div>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div id="heart">&#10084;</div>
+                        <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+                </div>
+                <div class="content">
+                    <img src="dochomeo.jpg">
+                    <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                        <div style="margin-top: 10px;">
+                            <b style="font-size: 15px;cursor: pointer;">ĐỒ CHO MÈO</b><br><br>
+                            <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        </div>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                            <div class="heart">&#10084;</div>
+                        <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+                </div>
+                <div class="content"><img src="thucancho.jpg">
+                    <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;cursor: pointer;">THỨC ĂN CHO CHÓ</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+                </div>
+                <div class="content"><img src="thucanmeo.jpg">
+                    <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">THỨC ĂN CHO MÈO</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+                </div>
+                <div class="content"><img src="hatcho.jpg">
+                    <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">HẠT CHO CHÓ</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+                </div>
+                <div class="content"><img src="hatmeo.jpg">
+                    <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer">HẠT CHO MÈO</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+                </div>
+                <div class="content"><img src="quanaocho.jpg">
+                    <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">QUẦN ÁO CHO CHÓ</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+                </div>
+                <div class="content"><img src="quanaomeo.jpg">
+                    <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">QUẦN ÁO CHO MÈO</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+                </div>
+        </div>
+        <!--  -->
+        <div id="content">
+            <div class="content"><img src="DOCHOICHO.jpg">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">ĐỒ CHƠI CHO CHÓ</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+            <div class="content"><img src="dochoimeo.jpg">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">ĐỒ CHƠI CHO MÈO</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+            <div class="content"><img src="patecho.jpg">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">PATE CHO CHÓ</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+            <div class="content"><img src="patemeo.jpg">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">PATE CHO MÈO</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+            <div class="content"><img src="banhthuongcho.jpg">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">BÁNH THƯỞNG CHO CHÓ</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+            <div class="content"><img src="banhthuongmeo.jpg">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">BÁNH THƯỞNG CHO MÈO</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+            <div class="content"><img src="supthuongcho.png">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">SÚP THƯỞNG CHO CHÓ</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+            <div class="content"><img src="supthuongmeo.jpg">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">SÚP THƯỞNG CHO MÈO</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+        </div>
+    <!--  -->
+        <div id="content">
+            <div class="content"><img src="SUACHOCHO.jpg">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">SỮA CHO CHÓ</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+            <div class="content"><img src="suachomeo.jpg">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">SỮA CHO MÈO</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+            <div class="content"><img src="suatamcho.jpg">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">SỮA TẮM CHO CHÓ</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+            <div class="content"><img src="suatammeo.jpg">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">SỮA TẮM CHO MÈO</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+            <div class="content"><img src="CHUONGCHO.jpg">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">CHUỒNG CHO CHÓ</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+            <div class="content"><img src="chuongmeo.jpg">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">CHUỒNG CHO MÈO</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+            <div class="content"><img src="LONGCHO.webp">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">LỒNG CHO CHÓ</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+            <div class="content"><img src="LONGMEO.JPG">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">LỒNG CHO MÈO</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+        </div>
+    <!--  -->
+        <div id="content">
+            <div class="content"><img src="GIUONGCHO.jpg">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                <div style="margin-top: 10px;">
+                    <b style="font-size: 15px;font-weight: bold;cursor: pointer;">GIƯỜNG NỆM CHO CHÓ</b><br><br>
+                    <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                    <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                    <div class="heart">&#10084;</div>
+                </div>
+                <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+            <div class="content"><img src="GIUONGMEO.jpg">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">GIƯỜNG NỆM CHO MÈO</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+            <div class="content"><img src="BALOCHO.jpg">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">BALO CHO CHÓ</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+            <div class="content"><img src="BALOMEO.jpg">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">BALO CHO MÈO</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+            <div class="content"><img src="VONGCOCHO.jpg">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">VÒNG CỔ CHO CHÓ</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+            <div class="content"><img src="VONGCOMEO.jpg">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">VÒNG CỔ CHO MÈO</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+            <div class="content"><img src="XICHCHO.jpg">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">DÂY XÍCH CHO CHÓ</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+            <div class="content"><img src="DAYXICHMEO.jpg">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">DÂY XÍCH CHO MÈO</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+        </div>
+<!--  -->
+        <div id="content">
+            <div class="content"><img src="ROMOMCHO.jpg">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">RỌ MÕM CHO CHÓ</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+             </div>
+            <div class="content"><img src="XUONGGAM.jpg">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">XƯƠNG CHO CHÓ</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+            <div class="content"><img src="BATAN.jpg">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">BÁT ĂN CHO CHÓ</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+            <div class="content"><img src="BINHNUOC.jpg">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">BÌNH NƯỚC CHO CHÓ MÈO</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+            <div class="content"><img src="TALOT.jpg">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">TÃ LÓT CHO CHÓ</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+            <div class="content"><img src="CAOMONG.jpg">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">CÀO MÓNG CHO MÈO</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+            <div class="content"><img src="NHAVESINH.jpg">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">NHÀ VỆ SINH CHO MÈO</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+            <div class="content"><img src="CATVESINH.jpg">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">CÁT VỆ SINH CHO MÈO</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+        </div>
+<!--  -->
+        <div id="dichvu" style="margin-left:70px;width: 92%;"><button style="width: 30%;height: 40px;margin-top: 20px;border-radius: 5px;background-color: #ffbc09;border: none;cursor: pointer;"><b>DỊCH VỤ THÚ CƯNG</b></button>
+            <br><br><hr size="5px" color="#ffbc09">
+        </div>
+            <div id="content1">
+                <div class="content1"><img src="SPACHOMEO.JPG">
+                    <div style="margin-top: 20px;"><b style="font-size: 15px;font-weight: bold;cursor: pointer;">SPA CHO MÈO</b></div>
+                </div>
+                <div class="content1"><img src="CATTIA.jpeg">
+                    <div style="margin-top: 20px;"><b style="font-size: 15px;font-weight: bold;cursor: pointer;">CẮT TỈA LÔNG CHO CHÓ</b></div>
+                </div>
+                <div class="content1"><img src="CAOLONGCHO.jpg">
+                    <div style="margin-top: 20px;"><b style="font-size: 15px;font-weight: bold;cursor: pointer;">CẠO LÔNG CHO CHÓ</b></div>
+                </div>
+                <div class="content1"><img src="CAOLONGMEO.jpg">
+                    <div style="margin-top: 20px;"><b style="font-size: 15px;font-weight: bold;cursor: pointer;">CẠO LÔNG CHO MÈO</b></div>
+                </div>
+                <div class="content1"><img src="CATMONGCM.jpg">
+                    <div style="margin-top: 20px;"><b style="font-size: 15px;font-weight: bold;cursor: pointer;">CẮT MÓNG CHO CHÓ, MÈO</b></div>
+                </div>
+                <div class="content1"><img src="TAMCM.jpg">
+                    <div style="margin-top: 20px;"><b style="font-size: 15px;font-weight: bold;cursor: pointer;">TẮM CHO CHÓ, MÈO</b></div>
+                </div>
+            </div>
+        <!--  -->
+        <div style="margin-left:70px;width: 92%;"><button style="width: 30%;height: 40px;margin-top: 20px;border-radius: 5px;background-color: #ffbc09;border: none;cursor: pointer;"><b>GIỐNG CHÓ CẢNH</b></button>
+            <br><br><hr size="5px" color="#ffbc09">
+        </div>
+            <div id="content">
+                <div class="content"><img src="corgi.png">
+                    <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">CHÓ CORGI</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+                </div>
+                <div class="content"><img src="PHOCSOC.png">
+                    <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">CHÓ PHỐC SÓC</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+                </div>
+                <div class="content"><img src="POODLE.png">
+                    <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">CHÓ POODLE</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+                </div>
+                <div class="content"><img src="BICHON.png">
+                    <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">CHÓ BICHON</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+                </div>
+                <div class="content"><img src="AKITA.jpg">
+                <div style="margin-top: 10px;">
+                    <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">CHÓ AKITA</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+                </div>
+            </div>
+            <div class="content"><img src="SHIBA.jpg">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">CHÓ SHIBA</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+            <div class="content"><img src="GOLDEN.jpg">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">CHÓ GOLDEN</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+            <div class="content"><img src="ALASKA.jpg">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">CHÓ ALASKA</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+            </div>
+        </div>
+        <!--  -->
+       
+        <!--  -->
+        <div style="margin-left:70px;width: 92%;"><button style="width: 30%;height: 40px;margin-top: 20px;border-radius: 5px;background-color: #ffbc09;border: none;cursor: pointer;"><b>GIỐNG MÈO CẢNH</b></button>
+            <br><br><hr size="5px" color="#ffbc09">
+        </div>
+        <div id="content">
+            <div class="content"><img src="meoANHLONGNGAN.jpg">
+            <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                <div style="margin-top: 10px;">
+                    <b style="font-size: 15px;font-weight: bold;cursor: pointer;" href="http://127.0.0.1:5500/trang%20chi%20ti%E1%BA%BFt%20cho%20m%C3%A8o/meo.html">MÈO ANH LÔNG NGẮN</b><br><br>
+                    <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                    <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                    <div class="heart">&#10084;</div>
+                </div>
+            <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+            <div class="content"><img src="MAOANHLONGDAI.jpg">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                <div style="margin-top: 10px;">
+                    <b style="font-size: 15px;font-weight: bold;cursor: pointer;">MÈO ANH LÔNG DÀI</b><br><br>
+                    <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                    <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                    <div class="heart">&#10084;</div>
+                </div>
+                <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+            <div class="content"><img src="MUNCHKIN.jpg">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">MÈO MUNCHIN</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+            <div class="content"><img src="TAI CUP.png">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">MÈO SCOTTISH TAI CỤP</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+            </div>
+            <div class="content"><img src="BENGAL.png">
+                <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                <div style="margin-top: 10px;">
+                    <b style="font-size: 15px;font-weight: bold;cursor: pointer;">MÈO BENGAL</b><br><br>
+                    <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                    <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                    <div class="heart">&#10084;</div>
+                </div>
+                <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+        </div>
+        <div class="content"><img src="TOYGER.jpg">
+            <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">MÈO TOYGER</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+        </div>
+        <div class="content"><img src="MAINECOON.jpg">
+            <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">MÈO MAINE COON</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+                    <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+        </div>
+        <div class="content"><img src="KHONGLONG.jpg">
+            <button style="margin-top: -250px;width: 70px;height: 30px;background-color: #e95c5c;border: none;">-10%</button>
+                    <div style="margin-top: 10px;">
+                        <b style="font-size: 15px;font-weight: bold;cursor: pointer;">MÈO KHÔNG LÔNG</b><br><br>
+                        <span style="color:red;cursor: pointer;font-size: 15px;float: left;">100.000</span><a style="float: left;color:red">đ</a><br>
+                        <p style="color: #ffbc09;margin-top: 10px;font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <div class="heart">&#10084;</div>
+                    </div>
+            <button class="add" style="width: 150px;height: 50px;border-radius: 15px;margin-top: 10px;margin-left: 20px;background: #5ccde9;border: none;cursor: pointer;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;cursor: pointer;"></i></button>
+        </div>
+    </div>
+<!--  -->
+   
+<!--  -->
+    <div id="thongtinlienhe" style="margin-top: 50px;">
+        <div class="ttlh">
+        <h2>Tổng đài hỗ trợ miễn phí</h2><br>
+            <a>Gọi mua hàng <b>1800.2097</b>(7h30 - 22h00)</a><br>
+            <a>Gọi khiếu nại <b>1800.2097</b>(7h30 - 22h00)</a><br>
+            <a>Gọi bảo hành <b>1800.2097</b>(7h30 - 22h00)</a><br><br>
+            <h2>Phương thức thanh toán</h2>
+            <div class="pptt"><img src="#"></div>
+            <div class="pptt"><img src="#"></div>
+            <div class="pptt"><img src="#"></div>
+            <div class="pptt"><img src="#"></div>
+            <div class="pptt"><img src="#"></div>
+            <div class="pptt"><img src="#"></div>
+            <div class="pptt"><img src="#"></div>
+        </div>
+        <div class="ttlh">
+            <h2> Thông Tin Và Chính Sách </h2><br><br>
+            <a> Mua hàng và thanh toán Online </a><br><br>
+            <a> Mua hàng trả góp Online </a><br><br>
+            <a> Tra thông tin đơn hàng </a><br><br>
+            <a> Tra điểm Smember </a><br><br>
+            <a> Tra thông tin bảo hành </a><br><br>
+            <a> Tra cứu hóa đơn điện tử </a><br><br>
+            <a> Thông tin hóa đơn mua hàng </a><br><br>
+            <a> Trung tâm bảo hành chính hãng </a><br><br>
+            <a> Quy định về việc sao lưu dữ liệu </a><br><br>
+        </div>
+        <div class="ttlh">
+            <h2>Dịch Vụ Và Thông Tin Khách </h2><br><br>
+            <a> Khách hàng doanh nghiệp </a><br><br>
+            <a> Ưu đãi thanh toán</a><br><br>
+            <a> Quy chế hoạt động</a><br><br>
+            <a> Chính sách Bảo hành</a><br><br>
+            <a>Liên hệ hợp tác kinh doanh</a><br><br>
+            <a>Tuyển dụng</a><br><br>
+            <a>Dịch vụ bảo hành điện thoại</a><br><br>
+            <a> Dịch vụ bảo hành mở hành</a><br><br>
+        </div>
+        <div class="ttlh">
+            <h2>Kết nối với Shopp</h2>
+            <div class="pptt1"><img src="logo.jpg"></div>
+            
+        </div>
+    </div>
+    </body>
+    <script src="shop.js"></script>
+</html>

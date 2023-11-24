@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <title>Shopp ban thu cung</title>
+        <link rel="stylesheet" href="dathang.css">
+        <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.min.css">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/6.4.0/css/font-awesome.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="logo">
+            <div id="logo1"><img src="logo.jpg"></div>
+            <div id="logo2">
+                <div class="logo2"><input type="button" value="Admin" onclick="window.location.href='http://127.0.0.1:5500/admin/admin.html'">
+                </div>
+                <div class="logo2"><input type="button" value="Giới thiệu"></div>
+                <div class="logo2"><input type="button" value="Đăng Nhập" onclick="window.location.href='http://127.0.0.1:5500/LOGIN/login.html'"></div>
+                <div class="search">
+                    <span class="icon"><i class="fa fa-search"></i></span>
+                    <input type="search" id="search" placeholder="Tìm kiếm thông tin tại đây..." />
+                </div>
+            </div>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="http://127.0.0.1:5500/shop.html"><i class="fa-solid fa-house"></i>Trang chủ</a></li>
+                <li><a href="#">Chó Cảnh<i class="fa-solid fa-caret-down"></i></a>
+                    <ul class="dropdown">
+                        <!-- <li><a href="#">POODLE</a></li>
+                        <li><a href="#">AKITA INU</a></li>
+                        <li><a href="#">GOLDEN RETRIEVER</a></li>
+                        <li><a href="#">BULL PHÁP</a></li>
+                        <li><a href="#">CORGI</a></li>
+                        <li><a href="#">HUSKY</a></li>
+                        <li><a href="#">PITBULL</a></li>
+                        <li><a href="#">SHIBA INU</a></li>
+                        <li><a href="#">BULLDOG ANH</a></li>
+                        <li><a href="#">ALASKA</a></li> -->
+                    </ul>
+                </li>
+                <li><a href="#">Mèo Cảnh<i class="fa-solid fa-caret-down"></i></a>
+                    <ul class="dropdown">
+                        <!-- <li><a href="#">ANH LÔNG NGẮN</a></li>
+                        <li><a href="#">SCOTTISH TAI CỤP</a></li>
+                        <li><a href="#">SPHYNX KHÔNG LÔNG</a></li>
+                        <li><a href="#">ANH LÔNG DÀI</a></li>
+                        <li><a href="#">BA TƯ</a></li>
+                        <li><a href="#">RAGDOLL</a></li>
+                        <li><a href="#">TOYGER</a></li>
+                        <li><a href="#">MUNCHKIN CHÂN NGẮN</a></li>
+                        <li><a href="#">BENGAL</a></li>
+                        <li><a href="#">MAINE COON</a></li> -->
+                    </ul>
+                </li>
+                <li><a href="#">Đồ cho chó <i class="fa-solid fa-caret-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="#">THỨC ĂN CHO CHÓ</a></li>
+                        <li><a href="#">SỮA TẮM CHO CHÓ</a></li>
+                        <li><a href="#">ĐỒ CHƠI CHO CHÓ</a></li>
+                        <li><a href="#">CHUỒNG CHO CHÓ</a></li>
+                        <li><a href="#">ĐỒ VỆ SINH CHO CHÓ</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Đồ cho mèo<i class="fa-solid fa-caret-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="#">THỨC ĂN CHO MÈO</a></li>
+                        <li><a href="#">SỮA TẮM CHO MÈO</a></li>
+                        <li><a href="#">ĐỒ CHƠI CHO MÈO</a></li>
+                        <li><a href="#">CHUỒNG CHO MÈO</a></li>
+                        <li><a href="#">ĐỒ VỆ SINH CHO MÈO</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Tin tức</a></li>
+                <li><a href="#">Dịch vụ tiện ích<i class="fa-solid fa-caret-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="#">Chăm sóc khách hàng</a></li>
+                        <li><a href="#qc2">PHỤ KIỆN</a></li>
+                        <li><a href="#dichvu">DỊCH VỤ THÚ CƯNG</a></li>
+                    </ul>
+                </li>
+                <a id="cart" onclick="showcart()" style="font-size: 15px;cursor: pointer;margin-left: 10px;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;margin-top: 30px;margin-left: 30px;cursor: pointer;position: relative;"></i><h3 class="cartNo" style="position: absolute;">0</h3></a>
+                <div class="box">
+                    <div class="container-2">  
+                    </div>
+                </div>
+            </ul>
+        </div>
+        <button style="width: 90%;height: 40px;margin-top: 20px;margin-left: 100px;background-color: #ffbc09">Thông tin cá nhân</button>
+        <div id="giohang">
+            <div id="gh">
+                <div id="thongtincanhan">
+                    <div class="thongtincanhan" style="width: 100%;height: 60px;">
+                        <a style="float: left;">Họ tên<span style="color: red;">*</span>:</a><br>
+                        <input type="text" placeholder="Nhập họ và tên" style="outline: none;padding: 5px;width: 70%;float: left;margin-top: 5px;">
+                    </div>
+                    <div class="thongtincanhan" style="width: 100%;height: 60px;">
+                        <a style="float: left;">Tỉnh<span style="color: red;">*</span>:</a><br>
+                        <input id="tinh" name="tinh" list="tinhds" type="text" style="outline: none;padding: 5px;width: 70%;float: left;margin-top: 5px;">
+                        <datalist id="tinhds">
+                            <option value="Hưng Yên">
+                            <option value="Hà Nội">
+                            <option value="Hồ Chí Minh">
+                            <option value="Hà Nam">
+                            <option value="Hải Dương">
+                        </datalist>
+                    </div>
+                    <div class="thongtincanhan" style="width: 100%;height: 60px;">
+                        <a style="float: left;">Địa chỉ<span style="color: red;">*</span>:</a><br>
+                        <input type="text" placeholder="Địa chỉ của bạn" style="outline: none;padding: 5px;width: 70%;float: left;margin-top: 5px;">
+                    </div>
+                    <div class="thongtincanhan" style="width: 100%;height: 60px;">
+                        <a style="float: left;">Điện Thoại<span style="color: red;">*</span>:</a><br>
+                        <input type="text" placeholder="Số điện thoại của bạn" style="outline: none;padding: 5px;width: 70%;float: left;margin-top: 5px;">
+                    </div>
+                    <div class="thongtincanhan" style="width: 100%;height: 60px;">
+                        <a style="float: left;">Email<span style="color: red;">*</span>:</a><br>
+                        <input type="text" placeholder="Email của bạn (nếu có)" style="outline: none;padding: 5px;width: 70%;float: left;margin-top: 5px;">
+                    </div>
+                    <div class="thongtincanhan1" style="width: 100%;height: 130px;">
+                        <a style="float: left;">Thông tin<span style="color: red;">*</span>:</a><br>
+                        <input type="text" placeholder="Vui lòng đóng góp ý kiến của bạn" style="outline: none;padding: 5px;width: 70%;height: 100px;float: left;margin-top: 5px;">
+                    </div>
+                    <button style="width: 120px;height: 40px;border-radius: 5px;color: aliceblue;background-color: #e95c5c;cursor: pointer;margin-left: 140px;font-size: 15px;">Gửi đơn hàng</button>
+                </div>
+                <div id="thanhtoan">
+                    <div id="tt">
+                        <h3>Tổng Tiền</h3><br>
+                        <div><a style="font-weight: bold;">Tạm tính:</a><br><br><hr style="background-color: black;"></div>
+                        <div style="margin-top: 10px;"><a style="font-weight: bold;">Giảm giá:</a><br><br><hr style="background-color: black;"></div>
+                        <div style="margin-top: 10px;"><a style="font-weight: bold;">Thành tiền (Đã bao gồm VAT 10%):</a><br><br><hr style="background-color: black;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="shopcart.js"></script>
+</html>

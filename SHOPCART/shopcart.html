@@ -1,0 +1,130 @@
+<html>
+    <head>
+        <title>Shopp ban thu cung</title>
+        <link rel="stylesheet" href="shopcart.css">
+        <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.min.css">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/6.4.0/css/font-awesome.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="logo">
+            <div id="logo1"><img src="logo.jpg" href="http://127.0.0.1:5500/index.html#"></div>
+            <div id="logo2">
+                <div class="logo2"><input type="button" value="Admin" onclick="window.location.href='http://127.0.0.1:5500/admin/admin.html'">
+                </div>
+                <div class="logo2"><input type="button" value="Giới thiệu"></div>
+                <div class="logo2"><input type="button" value="Đăng Nhập" onclick="window.location.href='http://127.0.0.1:5500/LOGIN/login.html'"></div>
+                <div class="search">
+                    <span class="icon"><i class="fa fa-search"></i></span>
+                    <input type="search" id="search" placeholder="Tìm kiếm thông tin tại đây..." />
+                </div>
+            </div>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="http://127.0.0.1:5500/shop.html"><i class="fa-solid fa-house"></i>Trang chủ</a></li>
+                <li><a href="#">Chó Cảnh<i class="fa-solid fa-caret-down"></i></a>
+                    <ul class="dropdown">
+                        <!-- <li><a href="#">POODLE</a></li>
+                        <li><a href="#">AKITA INU</a></li>
+                        <li><a href="#">GOLDEN RETRIEVER</a></li>
+                        <li><a href="#">BULL PHÁP</a></li>
+                        <li><a href="#">CORGI</a></li>
+                        <li><a href="#">HUSKY</a></li>
+                        <li><a href="#">PITBULL</a></li>
+                        <li><a href="#">SHIBA INU</a></li>
+                        <li><a href="#">BULLDOG ANH</a></li>
+                        <li><a href="#">ALASKA</a></li> -->
+                    </ul>
+                </li>
+                <li><a href="#">Mèo Cảnh<i class="fa-solid fa-caret-down"></i></a>
+                    <ul class="dropdown">
+                        <!-- <li><a href="#">ANH LÔNG NGẮN</a></li>
+                        <li><a href="#">SCOTTISH TAI CỤP</a></li>
+                        <li><a href="#">SPHYNX KHÔNG LÔNG</a></li>
+                        <li><a href="#">ANH LÔNG DÀI</a></li>
+                        <li><a href="#">BA TƯ</a></li>
+                        <li><a href="#">RAGDOLL</a></li>
+                        <li><a href="#">TOYGER</a></li>
+                        <li><a href="#">MUNCHKIN CHÂN NGẮN</a></li>
+                        <li><a href="#">BENGAL</a></li>
+                        <li><a href="#">MAINE COON</a></li> -->
+                    </ul>
+                </li>
+                <li><a href="#">Đồ cho chó <i class="fa-solid fa-caret-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="#">THỨC ĂN CHO CHÓ</a></li>
+                        <li><a href="#">SỮA TẮM CHO CHÓ</a></li>
+                        <li><a href="#">ĐỒ CHƠI CHO CHÓ</a></li>
+                        <li><a href="#">CHUỒNG CHO CHÓ</a></li>
+                        <li><a href="#">ĐỒ VỆ SINH CHO CHÓ</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Đồ cho mèo<i class="fa-solid fa-caret-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="#">THỨC ĂN CHO MÈO</a></li>
+                        <li><a href="#">SỮA TẮM CHO MÈO</a></li>
+                        <li><a href="#">ĐỒ CHƠI CHO MÈO</a></li>
+                        <li><a href="#">CHUỒNG CHO MÈO</a></li>
+                        <li><a href="#">ĐỒ VỆ SINH CHO MÈO</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Tin tức</a></li>
+                <li><a href="#">Dịch vụ tiện ích<i class="fa-solid fa-caret-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="#">Chăm sóc khách hàng</a></li>
+                        <li><a href="#qc2">PHỤ KIỆN</a></li>
+                        <li><a href="#dichvu">DỊCH VỤ THÚ CƯNG</a></li>
+                    </ul>
+                </li>
+                <a id="cart" onclick="showcart()" style="font-size: 15px;cursor: pointer;margin-left: 10px;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;margin-top: 30px;margin-left: 30px;cursor: pointer;position: relative;"></i>
+                <div class="box">
+                    <div class="container-2">  
+                    </div>
+                </div>
+            </ul>
+        </div>
+        <button style="width: 90%;height: 40px;margin-top: 20px;margin-left: 100px;background-color: #ffbc09">Thanh toán</button>
+        <div id="giohang">
+            <div id="gh">
+                <div id="addcart">
+                    <h2>Giỏ Hàng</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Sản Phẩm</th>
+                                <th>Tên</th>
+                                <th>Giá</th>
+                                <th>SL</th>
+                            </tr>
+                        </thead>
+                        <tbody id="them">
+                        <!-- <tr>
+                            <td style="display: flex;align-items: center;"><img src="TAI CUP.png" style="width: 70px;"><p style="margin-left: 10px;">Mèo tai cụp</p></td>
+                            <td><p><span style="margin-left: 20px;">22.060.000đ</span></p></td>
+                            <td><input style="outline: none;width: 30px;cursor: pointer;margin-left: 40px;" type="number" value=1 , min="1"></td>
+                            <td style="cursor: pointer;"><i class="fa-solid fa-trash-can"></i>Xóa</td>
+                        </tr>  -->
+                        </tbody>
+                    </table>
+                    <div style="text-align: right;" class="price-total">
+                        <p style="font-weight: bold;font-size: 20px;">Tổng Tiền:<span>0</span><sup>đ</sup></p>
+                    </div>
+                    <!-- <a style="margin-left: 500px;">(Đã bao gồm VAT 10%)</a> -->
+                </div>
+                <div id="thanhtoan">
+                    <div id="tt">
+                        <h3>Tổng Tiền</h3><br>
+                        <div style="margin-top: 10px;"><a style="font-weight: bold;">Giảm giá:<a style="float: right;color: red;font-size: 15px;">-10%</a></a><br><br><hr style="background-color: black;"></div>
+                        <div style="margin-top: 10px;"><a style="font-weight: bold;">Vận chuyển:<a style="float: right;color: red;font-size: 15px;">0đ</a></a><br><br><hr style="background-color: black;"></div>
+                        <div style="margin-top: 10px;"><a style="font-weight: bold;">Mã giảm giá/Quà tặng</a style="background-color: black;"></div>
+                        <div id="apdung" style="margin-left: 100px;">
+                            <input type="text" style="margin-top: 10px;margin-left: 10px;width: 300px;;height: 25px;outline:none;">
+                            <button style="height: 25px;width: 80px;;margin-left: -10px;background-color: #5ccde9;color: aliceblue;border: none;cursor: pointer;">Áp dụng</button>
+                    </div>
+                    <input id="thdh" type="button" value="TIẾN HÀNH ĐẶT HÀNG" onclick="window.location.href='http://127.0.0.1:5500/Ti%E1%BA%BFn%20h%C3%A0nh%20%C4%91%E1%BA%B7t%20h%C3%A0ng/dathang.html'" style="width: 250px;height: 25px;margin-top: 10px;margin-left: 150px;color: aliceblue;background-color: #5ccde9;cursor: pointer;border-radius: 5px;border: white;">
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="shopcart.js"></script>
+</html>
